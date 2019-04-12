@@ -52,13 +52,13 @@ public class Surveillance extends Service implements LocationListener {
     private double max_lat=181,min_lat=181,max_lon=181,min_lon=181;
 
     private boolean equals(Location myLocation) {
-        if(abs(myLocation.getLatitude()-max_lat)<=0.005)
+        if(abs(myLocation.getLatitude()-max_lat)<=0.0001)
             return true;
-        if(abs(myLocation.getLatitude()-min_lat)<=0.005)
+        if(abs(myLocation.getLatitude()-min_lat)<=0.0001)
             return true;
-        if(abs(myLocation.getLongitude()-max_lon)<=0.005)
+        if(abs(myLocation.getLongitude()-max_lon)<=0.0001)
             return true;
-        if(abs(myLocation.getLongitude()-min_lon)<=0.005)
+        if(abs(myLocation.getLongitude()-min_lon)<=0.0001)
             return true;
         return false;
     }
